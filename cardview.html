@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pesticide Product Cards</title>
+    <link rel="stylesheet" href="cardview.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <h1 class="logo">EcoPesticide</h1>
+            <button class="hamburger" aria-label="Toggle navigation">&#9776;</button>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#products">Products</a></li>
+                <li><a href="#about">About</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="product-grid">
+        <div class="product-card">
+            <img src="pesticide1.jpg" alt="Pesticide Product 1" class="product-image">
+            <h2 class="product-title">Organic Insecticide</h2>
+            <p class="product-description">
+                Active Ingredient: Neem Oil<br>
+                Usage: Spray on leaves<br>
+                Warning: Keep away from children.
+            </p>
+            <p class="product-price">Price: $15.00</p>
+            <div class="product-options">
+                <span>Size: 500ml</span>
+            </div>
+            <div class="product-buttons">
+                <button class="add-to-cart">Add to Cart</button>
+                <button class="buy-now">Buy Now</button>
+            </div>
+            <div class="product-extra">
+                <span>Rating: ★★★★☆</span>
+                <p>In Stock</p>
+                <p>EPA Reg. No: 12345-6789</p>
+                <div class="icons">
+                    <span>🐜</span>
+                    <span>🪰</span>
+                </div>
+            </div>
+        </div>
+        <!-- Repeat for more products -->
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
