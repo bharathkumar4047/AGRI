@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Grid</title>
+    <style>
+        a{text-decoration: none;
+        color: white;}
+        
+    </style>
+    <link rel="stylesheet" href="productcatev.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <header>
+        <nav class="navbar">
+            <h1 class="logo"><a href="index.html">Agridrop</a></h1>
+
+            <button class="hamburger" aria-label="Toggle navigation">
+                &#9776;
+            </button>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="signup.html">Sign Up</a></li>
+                <li><a href="Seller/seller.html">Become a seller</a></li>
+                <li><a href="Seller/addProduct.html">Sell Product</a></li>
+                <li><a href="#contact">About Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="product-grid">
+        <div class="product-card">
+            <img src="Assets/farmer.jpeg" alt="Product 1" class="product-image">
+            <h2 class="product-title">Product 1</h2>
+            <p class="product-price">Price: $20.00</p>
+            <p class="product-description">This is a short description of Product 1.</p>
+        </div>
+
+        <div class="product-card">
+            <img src="product2.jpg" alt="Product 2" class="product-image">
+            <h2 class="product-title">Product 2</h2>
+            <p class="product-price">Price: $30.00</p>
+            <p class="product-description">This is a short description of Product 2.</p>
+        </div>
+
+        <div class="product-card">
+            <img src="product3.jpg" alt="Product 3" class="product-image">
+            <h2 class="product-title">Product 3</h2>
+            <p class="product-price">Price: $40.00</p>
+            <p class="product-description">This is a short description of Product 3.</p>
+        </div>
+
+        <!-- Add more product-card sections dynamically -->
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

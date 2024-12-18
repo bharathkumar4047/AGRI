@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Product</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 500px;
+            margin: 50px auto;
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            text-align: center;
+            color: #333;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+        }
+
+        input, select, textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        .btn {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            background: #ff5f5f;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            text-align: center;
+            font-size: 16px;
+        }
+
+        .btn:hover {
+            background: #ff4242;
+        }
+
+        .add-actors {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .actor-list {
+            margin: 10px 0;
+            padding: 10px;
+            background: #f9f9f9;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Add Product</h2>
+        <form id="product-form">
+            <label for="product-id">Product ID</label>
+            <input type="text" id="product-id" placeholder="Enter product ID" required>
+
+            <label for="product-name">Product Name</label>
+            <input type="text" id="product-name" placeholder="Enter product name" required>
+
+            <label for="category">Category</label>
+            <input type="text" id="category" placeholder="Enter category" required>
+
+            <label for="price">Price</label>
+            <input type="number" id="price" placeholder="Enter price" required>
+
+            <!-- <label for="release-date">Release Date</label>
+            <input type="date" id="release-date" required> -->
+
+            <!-- <div class="add-actors">
+                <label for="tags">Tags</label>
+                <button type="button" class="btn" id="add-tag-btn">Add</button>
+            </div>
+            <ul id="tag-list" class="actor-list"></ul> -->
+
+            <label for="rating">Rating</label>
+            <input type="number" id="rating" placeholder="Enter rating (1-5)" min="1" max="5" step="0.1" required>
+
+            <label for="poster">Image</label>
+            <input type="file" id="poster" accept="image/*">
+
+            <button type="submit" class="btn">Submit</button>
+            <h6 style="text-align: center;">Back to <a href="../index.html">Home</a></h6>
+
+        </form>
+    </div>
+
+    <script>
+        const form = document.getElementById("product-form");
+        const tagBtn = document.getElementById("add-tag-btn");
+        const tagList = document.getElementById("tag-list");
+
+        // Handle adding tags
+        // tagBtn.addEventListener("click", () => {
+        //     const tag = prompt("Enter a tag:");
+        //     if (tag) {
+        //         const li = document.createElement("li");
+        //         li.textContent = tag;
+        //         li.style.marginBottom = "5px";
+        //         li.addEventListener("click", () => {
+        //             if (confirm("Remove this tag?")) {
+        //                 li.remove();
+        //             }
+        //         });
+        //         tagList.appendChild(li);
+        //     }
+        // });
+
+        // Handle form submission
+        form.addEventListener("submit", (e) => {
+            e.preventDefault();
+
+            const productData = {
+                id: document.getElementById("product-id").value,
+                name: document.getElementById("product-name").value,
+                category: document.getElementById("category").value,
+                price: document.getElementById("price").value,
+                rating: document.getElementById("rating").value,
+                image: document.getElementById("poster").files[0]?.name || "No image uploaded",
+            };
+
+            console.log("Product added:", productData);
+            alert("Product successfully added!");
+            form.reset();
+            tagList.innerHTML = ""; // Clear tag list
+        });
+    </script>
+</body>
+</html>
